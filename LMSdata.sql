@@ -142,3 +142,13 @@ CREATE TABLE user_roles (
   user_id int NOT NULL,
   role_name varchar(100)
 )
+-------------------------------------------------------------------------10) company---------------------------------------
+CREATE TABLE company(
+  id int IDENTITY PRIMARY KEY NOT NULL,
+  name int NOT NULL,
+  address varchar(150) DEFAULT NULL,
+  location varchar(50) DEFAULT NULL,
+  status int DEFAULT 1,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL
+)
