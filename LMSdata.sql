@@ -126,4 +126,14 @@ CREATE TABLE candidate_docs(
   status int DEFAULT 1,
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL,
-  )
+)
+-------------------------------------------------------------------------8) user_details---------------------------------------
+CREATE TABLE user_details (
+  id int IDENTITY PRIMARY KEY NOT NULL,
+  email varchar(50) UNIQUE NOT NULL,
+  first_name varchar(100) NOT NULL,
+  last_name varchar(100) NOT NULL,
+  password varchar(15) NOT NULL,
+  contact_number bigint NOT NULL,
+  verified bit DEFAULT NULL,
+)
