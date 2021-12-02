@@ -85,7 +85,7 @@ CREATE TABLE candidate_bank_det(
 )
 -------------------------------------------------------------------------5) candidate_qualification---------------------------------------
 CREATE TABLE candidate_qualification(
-  id int iDENTITY PRIMARY KEY NOT NULL,
+  id int IDENTITY PRIMARY KEY NOT NULL,
   candidate_id int NOT NULL FOREIGN KEY REFERENCES fellowship_candidates(id),
   diploma int DEFAULT 0,
   degree_name varchar(10) NOT NULL,
