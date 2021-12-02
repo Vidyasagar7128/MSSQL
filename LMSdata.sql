@@ -117,3 +117,13 @@ CREATE TABLE candidates_education_det_check (
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL
 )
+-------------------------------------------------------------------------7) candidate_docs---------------------------------------
+CREATE TABLE candidate_docs(
+  id int IDENTITY PRIMARY KEY NOT NULL,
+  candidate_id int  NOT NULL FOREIGN KEY REFERENCES fellowship_candidates(id),
+  doc_type varchar(20) DEFAULT NULL,
+  doc_path varchar(500) DEFAULT NULL,
+  status int DEFAULT 1,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL,
+  )
