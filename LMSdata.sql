@@ -184,6 +184,15 @@ CREATE TABLE mentor_ideation_map(
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL
 )
+-------------------------------------------------------------------------15) mentor_techstack---------------------------------------
+CREATE TABLE mentor_techstack(
+  id int IDENTITY PRIMARY KEY NOT NULL,
+  mentor_id int NOT NULL FOREIGN KEY REFERENCES mentor(id),
+  tech_stack_id int NOT NULL FOREIGN KEY REFERENCES tech_stack(id),
+  status int DEFAULT 1,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL
+)
 -------------------------------------------------------------------------16) tech_stack---------------------------------------
 CREATE TABLE tech_stack (
   id int NOT NULL IDENTITY PRIMARY KEY,
