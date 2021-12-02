@@ -166,6 +166,7 @@ CREATE TABLE maker_program(
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL,
 )
+-------------------------------------------------------------------------12) app_parameters---------------------------------------
 -------------------------------------------------------------------------13) mentor---------------------------------------
 CREATE TABLE mentor(
   id int NOT NULL IDENTITY PRIMARY KEY,
@@ -220,4 +221,26 @@ CREATE TABLE lab(
   status int DEFAULT 1,
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL,
+)
+-------------------------------------------------------------------------19) lab_threshold---------------------------------------
+-------------------------------------------------------------------------20) company_requirement---------------------------------------
+CREATE TABLE company_requirement(
+id int IDENTITY PRIMARY KEY NOT NULL,
+company_id int NOT NULL,
+candidate_id int NOT NULL FOREIGN KEY REFERENCES fellowship_candidates(id),
+requested_month varchar(20) NOT NULL,
+city varchar(20) DEFAULT NULL,
+is_doc_verification int DEFAULT 1,
+requirement_doc_path varchar(500) DEFAULT NULL,
+no_of_engg int NOT NULL,
+tech_stack_id int NOT NULL,
+tech_type_id int NOT NULL,
+maker_programs_id int NOT NULL,
+lead_id int NOT NULL,
+ideateion_engg_id int DEFAULT NULL,
+buddy_engg_id int  DEFAULT NULL,
+special_remark text DEFAULT NULL,
+status int DEFAULT 1,
+creator_stamp datetime DEFAULT NULL,
+creator_user int DEFAULT NULL,
 )
