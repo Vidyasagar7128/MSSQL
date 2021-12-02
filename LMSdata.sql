@@ -137,3 +137,8 @@ CREATE TABLE user_details (
   contact_number bigint NOT NULL,
   verified bit DEFAULT NULL,
 )
+-------------------------------------------------------------------------9) user_roles------------------------
+CREATE TABLE user_roles (
+  user_id int NOT NULL,
+  role_name varchar(100)
+)
