@@ -152,3 +152,35 @@ CREATE TABLE company(
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL
 )
+-------------------------------------------------------------------------11) maker_program---------------------------------------
+CREATE TABLE maker_program(
+  id int IDENTITY PRIMARY KEY NOT NULL,
+  program_name int NOT NULL,
+  program_type varchar(10) DEFAULT NULL,
+  program_link text DEFAULT NULL,
+  tech_stack_id int DEFAULT NULL FOREIGN KEY REFERENCES tech_stack(id),
+  tech_type_id int NOT NULL FOREIGN KEY REFERENCES tech_type(id),
+  is_program_approved int,
+  description varchar(500) DEFAULT NULL,
+  status int DEFAULT 1,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL,
+)
+-------------------------------------------------------------------------16) tech_stack---------------------------------------
+CREATE TABLE tech_stack (
+  id int NOT NULL IDENTITY PRIMARY KEY,
+  tech_name varchar(50) NOT NULL,
+  image_path varchar(500) DEFAULT NULL,
+  framework text DEFAULT NULL,
+  cur_status char(1) DEFAULT NULL,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL
+)
+-------------------------------------------------------------------------17) tech_type---------------------------------------
+CREATE TABLE tech_type (
+  id int NOT NULL IDENTITY PRIMARY KEY,
+  type_name varchar(50) NOT NULL,
+  cur_status char DEFAULT NULL,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL
+)
