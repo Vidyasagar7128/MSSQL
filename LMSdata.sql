@@ -168,7 +168,7 @@ CREATE TABLE maker_program(
 )
 -------------------------------------------------------------------------12) app_parameters---------------------------------------
 CREATE TABLE app_parameters (
-  id int NOT NULL,
+  id int IDENTITY PRIMARY KEY NOT NULL,
   key_type varchar(20) NOT NULL,
   key_value varchar(20) NOT NULL,
   key_text varchar(80) DEFAULT NULL,
@@ -178,7 +178,7 @@ CREATE TABLE app_parameters (
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL,
   seq_num int DEFAULT NULL,
-  PRIMARY KEY (key_type,  key_value)
+  --PRIMARY KEY (key_type,  key_value)
 )
 -------------------------------------------------------------------------13) mentor---------------------------------------
 CREATE TABLE mentor(
@@ -236,6 +236,19 @@ CREATE TABLE lab(
   creator_user int DEFAULT NULL,
 )
 -------------------------------------------------------------------------19) lab_threshold---------------------------------------
+CREATE TABLE lab_threshold(
+  id int IDENTITY PRIMARY KEY NOT NULL,
+  lab_id int NOT NULL FOREIGN KEY REFERENCES company_requirement(id),
+  lab_capacity varchar(50) DEFAULT NULL,
+  lead_threshold int DEFAULT NULL,
+  ideation_engg_threshold int DEFAULT NULL,
+  buddy_engg_threshold int DEFAULT NULL,
+  status int DEFAULT 1,
+  creator_stamp datetime DEFAULT NULL,
+  creator_user int DEFAULT NULL,
+  --KEY `FK_lab_lab_id` (`lab_id`),
+  --CONSTRAINT `FK_lab_lab_id` FOREIGN KEY (`lab_id`) REFERENCES company_requirement(id) REFERENCES `candidate_lead` (`id`)
+  )
 -------------------------------------------------------------------------20) company_requirement---------------------------------------
 CREATE TABLE company_requirement(
 id int IDENTITY PRIMARY KEY NOT NULL,
