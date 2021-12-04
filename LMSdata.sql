@@ -123,6 +123,8 @@ CREATE TABLE candidates_education_det_check (
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL
 )
+ALTER TABLE candidates_education_det_check
+ALTER COLUMN field_name varchar(25);
 -------------------------------------------------------------------------7) candidate_docs---------------------------------------
 CREATE TABLE candidate_docs(
   id int IDENTITY PRIMARY KEY NOT NULL,
