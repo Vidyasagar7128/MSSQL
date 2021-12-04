@@ -83,6 +83,12 @@ CREATE TABLE candidate_bank_det(
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL,
 )
+
+ALTER TABLE candidate_bank_det
+ALTER COLUMN account_num bigint;
+
+ALTER TABLE candidate_bank_det
+ALTER COLUMN addhaar_num bigint;
 -------------------------------------------------------------------------5) candidate_qualification---------------------------------------
 CREATE TABLE candidate_qualification(
   id int IDENTITY PRIMARY KEY NOT NULL,
