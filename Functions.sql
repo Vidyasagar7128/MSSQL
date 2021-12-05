@@ -23,4 +23,3 @@ ALTER FUNCTION getAccountDetails()
 RETURNS Table  
     RETURN (SELECT * FROM candidate_bank_det);
 select * from getAccountDetails();
-

@@ -19,6 +19,11 @@ insert into fellowship_candidates values('Atul', 'Arvind', 'Shinde', 'atul@gmail
 insert into fellowship_candidates values('Prem', 'Amar', 'Mulbharti', 'prem@gmail.com ', 'Pune','BCOM','2012-05-06', 8742049658,
 410006, 'Flutter', 'Good', 'Fine', 'Good', 'Fine', '1999-01-25', 1, 'Amar', 'Engineer',
 800325478, 750000.00, 'Pune', 'Pune', 'photo_path.jpg', '2014-12-13', 'Good', 1, 1, 1, 'Correct', 'Good', null, 4);
+
+insert into fellowship_candidates values('Prem', 'Amar', 'Mulbharti', 'prem@gmail.com ', 'Pune','BCOM','2012-05-06', 8742049658,
+410006, 'Flutter', 'Good', 'Fine', 'Good', 'Fine', '1999-01-25', 1, 'Amar', 'Engineer',
+800325478, 750000.00, 'Pune', 'Pune', 'photo_path.jpg', '2014-12-13', 'Good', 0, 0, 0, 'Correct', 'Good', null, 5);
+
 SELECT * from fellowship_candidates
 --------------------------------------------------candidate_bank_det---------------------
 insert into candidate_bank_det values('Vikas',075611610021545,1,'BKID002154',1,'CSIPG052J',1,321549874512,1,12,NULL,1);

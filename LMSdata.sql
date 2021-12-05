@@ -67,6 +67,9 @@ CREATE TABLE candidates_personal_det_check (
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL
 )
+ALTER TABLE candidates_personal_det_check
+ALTER COLUMN field_name VARCHAR(25)
+SELECT * FROM candidates_personal_det_check
 -------------------------------------------------------------------------4)candidate_bank_det---------------------------------------
 CREATE TABLE candidate_bank_det(
   id int IDENTITY PRIMARY KEY NOT NULL,
