@@ -20,8 +20,6 @@ CREATE TABLE hired_candidates (
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL,
 )
-INSERT INTO hired_candidates VALUES('Manoj','Vasant','Gaikwad','manoj@gmail.com','Mumbai','MCA','2019-12-13',8862547790,413517,
-'React','Good','Good','Good','Good','Nice',NULL,1);
 -------------------------------------------------------------------------2) fellowship_candidates---------------------------------------
 CREATE TABLE fellowship_candidates (
   id int IDENTITY PRIMARY KEY NOT NULL,

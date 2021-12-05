@@ -69,7 +69,7 @@ select * from candidates_education_det_check
   INSERT INTO hired_candidates VALUES('Atul','Arvind','Shinde','atul@gmail.com','Pune','MCA','1997-07-05',9854785814,'413517','Backend','Good','Nice','Good','Good','Nice',NULL,3);
   INSERT INTO hired_candidates VALUES('Prem','Amar','Mulbharti','prem@gmail.com','Banglore','MCS','1993-06-09',7754786214,'413517','Fullstack','Good','Good','Good','Good','Nice',NULL,4);
   SELECT * FROM hired_candidates
-  UPDATE hired_candidates SET first_name = 'Rohit' WHERE id=6
+  DELETE hired_candidates WHERE id=5
   -------------------------------------------User_Roles-------------------------------------
 insert into User_Roles values(1,'Backend');
 insert into User_Roles values(2,'Fullstack');
