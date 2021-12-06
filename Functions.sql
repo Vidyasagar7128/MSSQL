@@ -19,7 +19,8 @@ SELECT LOWER(first_name) FROM fellowship_candidates
 SELECT LEN(first_name) FROM fellowship_candidates
 SELECT SUBSTRING(first_name,1,1) FROM fellowship_candidates
 ----------------------------------Inline Table-Valued Function----------------
-ALTER FUNCTION getAccountDetails()  
+ALTER FUNCTION getAccountDetails(@id AS int)  
 RETURNS Table  
-    RETURN (SELECT * FROM candidate_bank_det);
-select * from getAccountDetails();
+    RETURN (SELECT * FROM candidate_bank_det WHERE id=@id);
+select * from getAccountDetails(6);
+SELECT * FROM candidate_bank_det;

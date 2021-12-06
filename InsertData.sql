@@ -25,6 +25,7 @@ insert into fellowship_candidates values('Prem', 'Amar', 'Mulbharti', 'prem@gmai
 800325478, 750000.00, 'Pune', 'Pune', 'photo_path.jpg', '2014-12-13', 'Good', 0, 0, 0, 'Correct', 'Good', null, 5);
 
 SELECT * from fellowship_candidates
+sp_help fellowship_candidates
 --------------------------------------------------candidate_bank_det---------------------
 insert into candidate_bank_det values('Vikas',075611610021545,1,'BKID002154',1,'CSIPG052J',1,321549874512,1,12,NULL,1);
 insert into candidate_bank_det values('Manoj',075611610025445,1,'ICICI002154',1,'CSIPB012J',1,541549874512,1,13,NULL,2);
