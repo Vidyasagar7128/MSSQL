@@ -163,6 +163,7 @@ CREATE TABLE company(
   creator_stamp datetime DEFAULT NULL,
   creator_user int DEFAULT NULL
 )
+ALTER TABLE company ALTER COLUMN location VARCHAR(150)
 -------------------------------------------------------------------------11) maker_program---------------------------------------
 CREATE TABLE maker_program(
   id int IDENTITY PRIMARY KEY NOT NULL,
